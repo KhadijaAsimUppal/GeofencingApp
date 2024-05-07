@@ -7,23 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA4814132BE77F7A00061552 /* LocationVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4814122BE77F7A00061552 /* LocationVM.swift */; };
+		DA4814152BE77F9D00061552 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4814142BE77F9D00061552 /* LocationService.swift */; };
+		DA4814182BE7836F00061552 /* Enumerations.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA4814172BE7836F00061552 /* Enumerations.swift */; };
+		DA48141B2BE788EC00061552 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48141A2BE788EC00061552 /* Constants.swift */; };
+		DA48141D2BE9141E00061552 /* Geofence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA48141C2BE9141E00061552 /* Geofence.swift */; };
 		DA60560A2BE77596002CBF2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6056092BE77596002CBF2D /* AppDelegate.swift */; };
 		DA60560C2BE77596002CBF2D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60560B2BE77596002CBF2D /* SceneDelegate.swift */; };
-		DA60560E2BE77596002CBF2D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60560D2BE77596002CBF2D /* ViewController.swift */; };
+		DA60560E2BE77596002CBF2D /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA60560D2BE77596002CBF2D /* LocationVC.swift */; };
 		DA6056112BE77596002CBF2D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA60560F2BE77596002CBF2D /* Main.storyboard */; };
 		DA6056132BE77597002CBF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6056122BE77597002CBF2D /* Assets.xcassets */; };
 		DA6056162BE77597002CBF2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6056142BE77597002CBF2D /* LaunchScreen.storyboard */; };
+		DAADEDB92BEA452E00B544BC /* LocationServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADEDB82BEA452E00B544BC /* LocationServiceProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DA4814122BE77F7A00061552 /* LocationVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVM.swift; sourceTree = "<group>"; };
+		DA4814142BE77F9D00061552 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		DA4814172BE7836F00061552 /* Enumerations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enumerations.swift; sourceTree = "<group>"; };
+		DA48141A2BE788EC00061552 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DA48141C2BE9141E00061552 /* Geofence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Geofence.swift; sourceTree = "<group>"; };
 		DA6056062BE77596002CBF2D /* GeofencingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeofencingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6056092BE77596002CBF2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DA60560B2BE77596002CBF2D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DA60560D2BE77596002CBF2D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DA60560D2BE77596002CBF2D /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		DA6056102BE77596002CBF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DA6056122BE77597002CBF2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DA6056152BE77597002CBF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA6056172BE77597002CBF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAADEDB82BEA452E00B544BC /* LocationServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +49,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA48140C2BE77B3D00061552 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				DA60560D2BE77596002CBF2D /* LocationVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DA48140D2BE77B4C00061552 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				DA4814122BE77F7A00061552 /* LocationVM.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		DA48140E2BE77B5A00061552 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA48141C2BE9141E00061552 /* Geofence.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DA48140F2BE77B6B00061552 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DAADEDB72BEA450200B544BC /* LocationService */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DA4814102BE77B7400061552 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DA6056142BE77597002CBF2D /* LaunchScreen.storyboard */,
+				DA60560F2BE77596002CBF2D /* Main.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		DA4814112BE77BA100061552 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				DA60560B2BE77596002CBF2D /* SceneDelegate.swift */,
+				DA6056092BE77596002CBF2D /* AppDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		DA4814162BE782DF00061552 /* Enumerations */ = {
+			isa = PBXGroup;
+			children = (
+				DA4814172BE7836F00061552 /* Enumerations.swift */,
+			);
+			path = Enumerations;
+			sourceTree = "<group>";
+		};
+		DA4814192BE784EF00061552 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				DA48141A2BE788EC00061552 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		DA6055FD2BE77596002CBF2D = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +134,27 @@
 		DA6056082BE77596002CBF2D /* GeofencingApp */ = {
 			isa = PBXGroup;
 			children = (
-				DA6056092BE77596002CBF2D /* AppDelegate.swift */,
-				DA60560B2BE77596002CBF2D /* SceneDelegate.swift */,
-				DA60560D2BE77596002CBF2D /* ViewController.swift */,
-				DA60560F2BE77596002CBF2D /* Main.storyboard */,
+				DA4814192BE784EF00061552 /* Constants */,
+				DA48140F2BE77B6B00061552 /* Services */,
+				DA4814162BE782DF00061552 /* Enumerations */,
+				DA4814112BE77BA100061552 /* AppDelegates */,
+				DA4814102BE77B7400061552 /* Storyboard */,
+				DA48140E2BE77B5A00061552 /* Views */,
+				DA48140D2BE77B4C00061552 /* ViewModels */,
+				DA48140C2BE77B3D00061552 /* ViewControllers */,
 				DA6056122BE77597002CBF2D /* Assets.xcassets */,
-				DA6056142BE77597002CBF2D /* LaunchScreen.storyboard */,
 				DA6056172BE77597002CBF2D /* Info.plist */,
 			);
 			path = GeofencingApp;
+			sourceTree = "<group>";
+		};
+		DAADEDB72BEA450200B544BC /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				DA4814142BE77F9D00061552 /* LocationService.swift */,
+				DAADEDB82BEA452E00B544BC /* LocationServiceProtocols.swift */,
+			);
+			path = LocationService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +228,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DA60560E2BE77596002CBF2D /* ViewController.swift in Sources */,
+				DA60560E2BE77596002CBF2D /* LocationVC.swift in Sources */,
 				DA60560A2BE77596002CBF2D /* AppDelegate.swift in Sources */,
+				DA4814152BE77F9D00061552 /* LocationService.swift in Sources */,
 				DA60560C2BE77596002CBF2D /* SceneDelegate.swift in Sources */,
+				DA48141B2BE788EC00061552 /* Constants.swift in Sources */,
+				DA48141D2BE9141E00061552 /* Geofence.swift in Sources */,
+				DA4814132BE77F7A00061552 /* LocationVM.swift in Sources */,
+				DA4814182BE7836F00061552 /* Enumerations.swift in Sources */,
+				DAADEDB92BEA452E00B544BC /* LocationServiceProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,11 +386,15 @@
 				DEVELOPMENT_TEAM = 9QYFUN6T8H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeofencingApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses location permission to setup and monitor geofences";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -318,11 +418,15 @@
 				DEVELOPMENT_TEAM = 9QYFUN6T8H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeofencingApp/Info.plist;
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses location permission to setup and monitor geofences";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
