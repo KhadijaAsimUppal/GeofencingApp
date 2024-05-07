@@ -23,6 +23,16 @@ struct K {
         static let restricted = "Location services are restricted on this device. Please enable location services in settings to continue using the application"
     }
     
+    struct LocationEventTitle {
+        static let enter = "Entered region"
+        static let exit = "Exit Region"
+    }
+    
+    struct LocationEventMessage {
+        static let enter = "You have entered the geofenced region"
+        static let exit = "You have exit the geofenced region"
+    }
+    
     static let openSettingsString = "Open Settings"
     static let okString = "Ok"
 }

@@ -17,6 +17,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
+        addTapGestureRecognizer()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,6 +48,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    private func addTapGestureRecognizer() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = false // Allow other gestures to work alongside this one
+        window?.addGestureRecognizer(tapGesture)
+    }
+
+    @objc private func dismissKeyboard() {
+        window?.endEditing(true)
+    }
 
 }
 

@@ -20,22 +20,21 @@ class LocationVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        hideKeyboardWhenTappedAround()
         initClosures()
+        locationVM.requestNotificationsPermission()
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        locationVM.handleLocationAuthorization()
+        locationVM.handleLocationPermission()
     }
     
 }
 
 // MARK: - Closures implementation
 extension LocationVC {
-    
-    func initClosures() {
+    private func initClosures() {
         
         ///show location services disabled alert with a custom 'Open Settings' action
         locationVM.locationServiceDisabled = { [weak self] title, message in
@@ -78,7 +77,7 @@ extension LocationVC {
 extension LocationVC {
     
     ///Stops all previously montitored regions and start montitoring a new one with the user entered values for latitude, longitude and radius
-    func startMonitoringGeofence() {
+    private func startMonitoringGeofence() {
         let latitude = latitudeTextField.text
         let longitude = longitudeTextField.text
         let radius = radiusTextField.text
@@ -91,19 +90,10 @@ extension LocationVC {
 extension LocationVC {
     
     ///A generic method to show an alert with a default 'OK' action
-    func showAlert(title: String, message: String, actions: [UIAlertAction]? = nil) {
+    private func showAlert(title: String, message: String, actions: [UIAlertAction]? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         actions?.forEach { alert.addAction($0) }
         alert.addAction(UIAlertAction(title: K.okString, style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
-    }
-    
-    private func hideKeyboardWhenTappedAround() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        view.addGestureRecognizer(tapGesture)
-    }
-
-    @objc func hideKeyboard() {
-        view.endEditing(true)
     }
 }

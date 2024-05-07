@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>The app uses location permission to setup and monitor geofences</string>
+	<string>The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>The app uses location permission to setup and monitor geofences</string>
+	<string>The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>The app uses location permission to setup and monitor geofences</string>
+	<string>The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

@@ -10,6 +10,9 @@ import CoreLocation
 
 class LocationVM {
     
+    private let locationService = LocationService()
+    private let notificationService = NotificationService()
+    
     private var geofence: Geofence?
     private var entryTimestamp: Date?
     private var exitTimestamp: Date?
@@ -18,8 +21,6 @@ class LocationVM {
     var locationServiceDisabled: ((String, String) -> ())?
     var geofenceMontitoringStarted: ((CLRegion) -> ())?
     var dwellTimeUpdated: ((String) -> ())?
-    
-    private let locationService = LocationService()
 
     init() {
         locationService.locationServiceDelegate = self
@@ -31,7 +32,7 @@ class LocationVM {
 // MARK: - Location Permission
 extension LocationVM {
     
-    func handleLocationAuthorization() {
+    func handleLocationPermission() {
         let locPermissionStatus = locationService.getLocationPermissionStatus()
         switch locPermissionStatus {
         case .authorized:
@@ -43,6 +44,14 @@ extension LocationVM {
         case .notDetermined:
             locationService.requestLocationPermission()
         }
+    }
+}
+
+// MARK: - Notification Permission
+extension LocationVM {
+    
+    func requestNotificationsPermission() {
+        notificationService.requestNotificationPermission()
     }
 }
 
@@ -84,7 +93,7 @@ extension LocationVM {
 // MARK: - Location Service Delegate
 extension LocationVM: LocationPermissionDelegate {
     func didUpdateLocationPermissionStatus(_ status: CLAuthorizationStatus) {
-        handleLocationAuthorization()
+        handleLocationPermission()
     }
 }
 
@@ -97,11 +106,13 @@ extension LocationVM: GeofenceDelegate {
     func didEnterGeofence(_ timestamp: Date) {
         entryTimestamp = timestamp
         logEvent(eventType: .enter, timestamp: timestamp)
+        sendNotification(eventType: .enter, timestamp: timestamp)
     }
     
     func didExitGeofence(_ timestamp: Date) {
         exitTimestamp = timestamp
         logEvent(eventType: .exit, timestamp: timestamp)
+        sendNotification(eventType: .exit, timestamp: timestamp)
         calculateDwellTime()
         resetGeofenceTimestampValues()
     }
@@ -110,8 +121,14 @@ extension LocationVM: GeofenceDelegate {
 //MARK: - Helper functions
 extension LocationVM {
     
+    ///Prints the LocationEvent to console
     private func logEvent(eventType: LocationEventType, timestamp: Date) {
-        print(eventType.messgae, "\(String(describing: geofence)) at: \(timestamp)")
+        print(eventType.title, "\(String(describing: geofence)) at: \(timestamp)")
+    }
+    
+    ///send a local notification for the LocationEvent
+    private func sendNotification(eventType: LocationEventType, timestamp: Date) {
+        notificationService.sendNotification(title: eventType.title, body: "\(eventType.message)  Region: \(String(describing: geofence)) at: \(timestamp)")
     }
     
     ///calculates swell time inside a geofence

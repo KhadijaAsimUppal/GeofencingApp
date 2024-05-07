@@ -45,12 +45,42 @@ enum LocationEventType {
     case enter
     case exit
     
-    var messgae: String {
+    var title: String {
         switch self {
         case .enter:
-            return "Entered region"
+            return K.LocationEventTitle.enter
         case .exit:
-            return "Exit region"
+            return K.LocationEventTitle.exit
+        }
+    }
+    
+    var message: String {
+        switch self {
+        case .enter:
+            return K.LocationEventMessage.enter
+        case .exit:
+            return K.LocationEventMessage.exit
         }
     }
 }
+
+enum NotificationPermissionStatus {
+    case authorized
+    case denied
+    case notDetermined
+    case provisional
+    
+    var message: String {
+        switch self {
+        case .authorized:
+            return "Notification permission is authorized."
+        case .denied:
+            return "Notification permission is denied."
+        case .notDetermined:
+            return "Notification permission is not determined."
+        case .provisional:
+            return "Notification permission is provisional."
+        }
+    }
+}
+

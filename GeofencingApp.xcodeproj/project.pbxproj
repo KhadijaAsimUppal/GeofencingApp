@@ -19,6 +19,7 @@
 		DA6056132BE77597002CBF2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DA6056122BE77597002CBF2D /* Assets.xcassets */; };
 		DA6056162BE77597002CBF2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6056142BE77597002CBF2D /* LaunchScreen.storyboard */; };
 		DAADEDB92BEA452E00B544BC /* LocationServiceProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADEDB82BEA452E00B544BC /* LocationServiceProtocols.swift */; };
+		DAADEDBC2BEA797200B544BC /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAADEDBB2BEA797200B544BC /* NotificationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DA6056152BE77597002CBF2D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DA6056172BE77597002CBF2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAADEDB82BEA452E00B544BC /* LocationServiceProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceProtocols.swift; sourceTree = "<group>"; };
+		DAADEDBB2BEA797200B544BC /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 		DA48140F2BE77B6B00061552 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				DAADEDBA2BEA76FB00B544BC /* NotificationService */,
 				DAADEDB72BEA450200B544BC /* LocationService */,
 			);
 			path = Services;
@@ -157,6 +160,14 @@
 			path = LocationService;
 			sourceTree = "<group>";
 		};
+		DAADEDBA2BEA76FB00B544BC /* NotificationService */ = {
+			isa = PBXGroup;
+			children = (
+				DAADEDBB2BEA797200B544BC /* NotificationService.swift */,
+			);
+			path = NotificationService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -236,6 +247,7 @@
 				DA48141D2BE9141E00061552 /* Geofence.swift in Sources */,
 				DA4814132BE77F7A00061552 /* LocationVM.swift in Sources */,
 				DA4814182BE7836F00061552 /* Enumerations.swift in Sources */,
+				DAADEDBC2BEA797200B544BC /* NotificationService.swift in Sources */,
 				DAADEDB92BEA452E00B544BC /* LocationServiceProtocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,9 +398,9 @@
 				DEVELOPMENT_TEAM = 9QYFUN6T8H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeofencingApp/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses location permission to setup and monitor geofences";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -418,9 +430,9 @@
 				DEVELOPMENT_TEAM = 9QYFUN6T8H;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = GeofencingApp/Info.plist;
-				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
-				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses location permission to setup and monitor geofences";
-				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app uses location permission to setup and monitor geofences";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "The app uses location permission to receive entry and exit events in a specified geofence. Your data is secure and is used only to improve your app experience. Grant access now.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
